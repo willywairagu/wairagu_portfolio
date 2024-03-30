@@ -68,7 +68,7 @@ const Contact = () => {
               marginTop={4}
               marginBottom={6}
             >
-              Do you need a full-stack web developer? I would love to hear from you.
+              Do you need a data intensive application developer? Lets Connect..
             </Typography>
           </Box>
           {contact.slice(0, 1).map((item, i) => (

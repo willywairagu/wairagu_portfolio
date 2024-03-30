@@ -66,7 +66,7 @@ const Testimonials = () => {
               marginTop={4}
               marginBottom={6}
             >
-              Check what clients have said about my work
+              Check out what clients and colleagues have said about my work...
             </Typography>
           </Box>
           <Grid container spacing={4}>

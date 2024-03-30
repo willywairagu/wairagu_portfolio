@@ -58,7 +58,9 @@ const About = () => {
               marginTop={4}
               marginBottom={6}
             >
-              I am a freelance web developer who builds elegant, fast, and scalable web applications
+              Wilberforce is a proficient and results-driven Data Engineer based in 
+Nairobi, Kenya, with a robust background in designing, maintaining, 
+and optimizing scalable data architectures
             </Typography>
           </Box>
           <Grid container spacing={4}>
