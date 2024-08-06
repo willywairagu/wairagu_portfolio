@@ -58,9 +58,7 @@ const About = () => {
               marginTop={4}
               marginBottom={6}
             >
-              Wilberforce is a proficient and results-driven Data Engineer based in 
-Nairobi, Kenya, with a robust background in designing, maintaining, 
-and optimizing scalable data architectures
+              Here is a brief bio about Wilberforce...
             </Typography>
           </Box>
           <Grid container spacing={4}>
