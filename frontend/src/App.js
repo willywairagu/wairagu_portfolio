@@ -14,7 +14,7 @@ const App = () => {
     <HelmetProvider>
       <Helmet 
         titleTemplate="%s | Wairagu "
-        defaultTitle="Wairagu's Portfolio"
+        defaultTitle="Wairagu"
       />
       <ThemeProvider theme={theme}>
         <CssBaseline />

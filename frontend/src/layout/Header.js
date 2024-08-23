@@ -73,7 +73,7 @@ const Header = ({ onSidebarOpen }) => {
                   display: { md: "inline", xs: "none" }
                 }}
               >
-                Wairagu's Portfolio
+                Engineering Modern Data Platforms...
               </Typography>
             </IconButton>
           </Link>

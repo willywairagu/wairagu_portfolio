@@ -86,14 +86,18 @@ const Hero = () => {
                   </Typography>
                 </Box>
                 <Box marginBottom={3}>
-                  <Typography
-                    variant="h4"
-                    component="p"
-                    color={theme.palette.text.secondary}
-                    align="justify"
-                  >
-                    {item.description}
-                  </Typography>
+                  {item.description.split('\n').map((paragraph, index) => (
+                    <Typography
+                      key={index}
+                      variant="h4"
+                      component="p"
+                      color={theme.palette.text.secondary}
+                      align="justify"
+                      paragraph
+                    >
+                      {paragraph}
+                    </Typography>
+                  ))}
                 </Box>
                 <HeroButtons />
               </Box>
@@ -138,6 +142,6 @@ const Hero = () => {
       </Box>
     </div>     
   );
-};
+}
 
 export default Hero;

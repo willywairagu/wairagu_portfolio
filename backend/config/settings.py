@@ -32,7 +32,7 @@ INSTALLED_APPS = [
   'corsheaders',
 
   # Local
-  'about',
+  'experience',
   'projects',
   'technologies',
   'testimonials',
