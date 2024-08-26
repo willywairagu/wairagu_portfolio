@@ -7,3 +7,4 @@ node_modules/
 venv/
 */migrations/*
 !*/migrations/__init__.py
+backend/static
