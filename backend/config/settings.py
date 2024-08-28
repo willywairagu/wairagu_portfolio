@@ -155,13 +155,19 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
-
-CORS_ALLOWED_ORIGINS = [
-  'http://localhost:3000', 
-  'http://willywairagu.com',
-  'https://willywairagu.com',
-  'https://api.willywairagu.com'
+CSRF_TRUSTED_ORIGINS = [
+    'http://api.willywairagu.com',
+    'https://api.willywairagu.com',
+    'http://willywairagu.com',
+    'https://willywairagu.com',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    # 'http://localhost:3000',
+    'http://willywairagu.com',
+    'https://willywairagu.com',
+    'http://api.willywairagu.com',
+    'https://api.willywairagu.com',
+]
 
 FILE_UPLOAD_PERMISSIONS=0o640
