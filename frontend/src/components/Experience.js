@@ -54,7 +54,7 @@ const Experience = () => {
       >
         Work Experience
       </Typography>
-      <Carousel interval={5000}>
+      <Carousel interval={10000}>
         {experience.map((item, i) => (
           <Box key={i} padding={2}>
             <Grid container spacing={4}>
