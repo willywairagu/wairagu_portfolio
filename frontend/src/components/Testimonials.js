@@ -22,7 +22,7 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   
   const fetchTestimonials = () => {
-    axios.get("http://127.0.0.1:8000/testimonials", {
+    axios.get(`${process.env.REACT_APP_API_URL}/testimonials`, {
       headers: {
         "Accept": "application/json"
       }

@@ -15,7 +15,7 @@ const Technologies = () => {
   const [technologies, setTechnologies] = useState([]);
   
   const fetchTechnologies = () => {
-    axios.get("http://127.0.0.1:8000/technologies", {
+    axios.get(`${process.env.REACT_APP_API_URL}/technologies`, {
       headers: {
         "Accept": "application/json",
       }

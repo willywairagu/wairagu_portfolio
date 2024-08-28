@@ -1,26 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { AppBar, Toolbar, IconButton, Box, Typography, Divider } from "@mui/material";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { useTheme } from "@mui/material/styles";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-
-// Font Awesome Icons
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-library.add(faLaptopCode);
-
+import { HashLink as Link } from 'react-router-hash-link'; // Import HashLink
 import CustomButton from "../components/CustomButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Header = ({ onSidebarOpen }) => {
   const theme = useTheme();
@@ -28,7 +17,7 @@ const Header = ({ onSidebarOpen }) => {
     disableHysteresis: true,
     threshold: 38,
   });
-  
+
   return (
     <React.Fragment>
       <AppBar
@@ -51,7 +40,7 @@ const Header = ({ onSidebarOpen }) => {
           >
             <MenuIcon fontSize="medium" />
           </IconButton>
-          <Link href="/" style={{ textDecoration: "none" }}>
+          <Link to="#home" style={{ textDecoration: "none" }}>
             <IconButton size="large" disabled>
               <FontAwesomeIcon 
                 icon={faLaptopCode} 
@@ -84,30 +73,42 @@ const Header = ({ onSidebarOpen }) => {
               display: { md: "flex", xs: "none" } 
             }}
           >
-            <CustomButton 
-              href="#home"
-              text="Home"
-            />
-            <CustomButton 
-              href="#about"
-              text="About"
-            />
-            <CustomButton 
-              href="#projects"
-              text="Projects"
-            />
-            <CustomButton 
-              href="#technologies"
-              text="Technologies"
-            />
-            <CustomButton
-              href="#testimonials"
-              text="Testimonials"
-            />
-            <CustomButton 
-              href="#contact"
-              text="Contact"
-            />
+            <Link smooth to="#home">
+              <CustomButton 
+                href="#home"
+                text="Home"
+              />
+            </Link>
+            <Link smooth to="#experience">
+              <CustomButton 
+                href="#experience"
+                text="Experience"
+              />
+            </Link>
+            <Link smooth to="#projects">
+              <CustomButton 
+                href="#projects"
+                text="Projects"
+              />
+            </Link>
+            <Link smooth to="#technologies">
+              <CustomButton 
+                href="#technologies"
+                text="Technologies"
+              />
+            </Link>
+            <Link smooth to="#testimonials">
+              <CustomButton
+                href="#testimonials"
+                text="Testimonials"
+              />
+            </Link>
+            <Link smooth to="#contact">
+              <CustomButton 
+                href="#contact"
+                text="Contact"
+              />
+            </Link>
           </Box>
           <Divider
             orientation="vertical"
@@ -119,14 +120,14 @@ const Header = ({ onSidebarOpen }) => {
           />
           <Box sx={{ display: { lg: "flex", md: "none", xs: "none" } }}>
             <IconButton 
-              aria-label="YouTube" 
-              href="#"
+              aria-label="Twitter" 
+              href="https://x.com/ber4ce"
               target="_blank"
               sx={{ 
                 color: theme.palette.primary.main,
               }}
             >
-              <YouTubeIcon fontSize="large" />
+              <TwitterIcon fontSize="large" />
             </IconButton>
             <IconButton 
               aria-label="LinkedIn" 
@@ -140,7 +141,7 @@ const Header = ({ onSidebarOpen }) => {
             </IconButton>
             <IconButton 
               aria-label="Instagram" 
-              href="#"
+              href="https://www.instagram.com/willy_wairagu/"
               target="_blank"
               sx={{ 
                 color: theme.palette.primary.main,
@@ -153,10 +154,6 @@ const Header = ({ onSidebarOpen }) => {
       </AppBar>
     </React.Fragment>
   );
-};
-
-Header.propTypes = {
-  onSidebarOpen: PropTypes.func,
 };
 
 export default Header;

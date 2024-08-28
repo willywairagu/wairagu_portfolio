@@ -22,7 +22,7 @@ const Hero = () => {
   const [hero, setHero] = useState([]);
   
   const fetchHero = () => {
-    axios.get("http://127.0.0.1:8000/hero", {
+    axios.get(`${process.env.REACT_APP_API_URL}/hero`, {
       headers: {
         "Accept": "application/json",
       }

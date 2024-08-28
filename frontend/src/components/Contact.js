@@ -20,7 +20,7 @@ const Contact = () => {
   const [contact, setContact] = useState([]);
   
   const fetchContact = () => {
-    axios.get("http://127.0.0.1:8000/contact", {
+    axios.get(`${process.env.REACT_APP_API_URL}/contact`, {
       headers: {
         "Accept": "application/json",
       }

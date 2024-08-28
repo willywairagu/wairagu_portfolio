@@ -14,7 +14,7 @@ const About = () => {
   const [about, setAbout] = useState([]);
   
   const fetchAbout = () => {
-    axios.get("http://127.0.0.1:8000/about", {
+    axios.get(`${process.env.REACT_APP_API_URL}/about`, {
       headers: {
         "Accept": "application/json"
       }
