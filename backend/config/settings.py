@@ -163,7 +163,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    # 'http://localhost:3000',
+    'http://localhost:3000',
     'http://willywairagu.com',
     'https://willywairagu.com',
     'http://api.willywairagu.com',
