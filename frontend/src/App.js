@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 import theme from "./theme/theme";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
+import BlogList  from "./components/BlogList";
+import BlogPost  from "./components/BlogPost";  
 
 const App = () => {  
   return (
@@ -22,6 +24,8 @@ const App = () => {
           <Layout>
             <Routes>
               <Route exact path='/' element={<Home />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
             </Routes>
           </Layout>
         </BrowserRouter>

@@ -103,6 +103,12 @@ const Sidebar = ({ open, onClose }) => {
                 text="Contact"
               />
             </Box>
+            <Box paddingY={1}>
+              <CustomButton 
+                href="/blog"
+                text="Blog"
+              />
+            </Box>
             <Box>
               <Stack direction="row" spacing={1}>
                 <IconButton 

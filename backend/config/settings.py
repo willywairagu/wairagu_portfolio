@@ -31,6 +31,8 @@ INSTALLED_APPS = [
   # 3rd party
   'rest_framework',
   'corsheaders',
+  'ckeditor',
+  'ckeditor_uploader',
 
   # Local
   'experience',
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
   'contact',
   'hero',
   'footer',
+  'blog',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +128,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

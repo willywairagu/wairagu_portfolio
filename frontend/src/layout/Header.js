@@ -103,10 +103,10 @@ const Header = ({ onSidebarOpen }) => {
                 text="Testimonials"
               />
             </Link>
-            <Link smooth to="#contact">
+            <Link to="/blog">
               <CustomButton 
-                href="#contact"
-                text="Contact"
+                href="/blog"
+                text="Blog"
               />
             </Link>
           </Box>

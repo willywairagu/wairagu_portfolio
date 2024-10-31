@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { Button, Box } from "@mui/material";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import Hero from "../components/Hero";
@@ -18,6 +19,16 @@ const Home = () => {
       <Technologies />
       <Testimonials />
       <Contact />
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        paddingY={4}
+      >
+        <Button component={Link} to="/blog" variant="contained" color="primary" size="large">
+          Visit Blog
+        </Button>
+      </Box>
     </div>
   );
 };
