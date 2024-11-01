@@ -24,7 +24,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     volumes:
-      - frontend_build:/app/build
+    - ./frontend/build:/app/frontend  # Changed this line
     networks:
       - app-network
 
