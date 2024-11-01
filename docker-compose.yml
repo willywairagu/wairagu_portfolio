@@ -6,6 +6,8 @@ services:
     build: 
       context: ./backend
       dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Add this
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
