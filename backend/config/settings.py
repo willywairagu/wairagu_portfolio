@@ -15,7 +15,27 @@ SECRET_KEY = 'django-insecure-kngepvxt6e582&9*-xvhcln0uo!k*^%tm_@5uw42inc-h@6$lh
 ALLOWED_HOSTS = ['api.willywairagu.com', 'willywairagu.com', 'www.willywairagu.com', 'admin.willywairagu.com']
 
 # Make sure DEBUG is False in production
-DEBUG = False
+DEBUG = True
+
+# Add to settings.py temporarily
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/tmp/django-debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 # Security settings
 SECURE_SSL_REDIRECT = True
