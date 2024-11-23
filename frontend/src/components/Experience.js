@@ -8,34 +8,34 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from 'react-material-ui-carousel';
 
 const Experience = () => {
-  const theme = useTheme();
   const [experience, setExperience] = useState([]);
-
+  
   const fetchExperience = () => {
+    console.log('Fetching experience from:', `${process.env.REACT_APP_API_URL}/experience/experience`);
+    
     axios.get(`${process.env.REACT_APP_API_URL}/experience/experience`, {
       headers: {
         "Accept": "application/json",
-      }
+        "Content-Type": "application/json",
+      },
+      withCredentials: true
     })
     .then(response => {
-      const data = response.data;
-      if (Array.isArray(data)) {
-        // Ensure each experience item has an images property
-        const updatedData = data.map(item => ({
-          ...item,
-          images: item.images || []
-        }));
-        setExperience(updatedData);
-      } else {
-        console.error("API response is not an array:", data);
-      }
+      console.log('Experience API response:', response.data);
+      setExperience(response.data);
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.error('Experience API error:', error);
+      console.error('Error details:', error.response || error.message);
+    });
   };
-
+  
   useEffect(() => {
     fetchExperience();
   }, []);
+
+  // Add debug render
+  console.log('Current experience state:', experience);
 
   return (
     <Box
@@ -113,6 +113,7 @@ const Experience = () => {
       </Carousel>
     </Box>
   );
+  
 };
 
 export default Experience;

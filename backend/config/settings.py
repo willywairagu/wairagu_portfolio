@@ -169,7 +169,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOW_CREDENTIALS = True
+
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -198,12 +198,19 @@ CSRF_TRUSTED_ORIGINS = [
     'https://willywairagu.com',
 ]
 
+# Update CORS settings
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://willywairagu.com',
     'https://willywairagu.com',
+    'http://www.willywairagu.com',
+    'https://www.willywairagu.com',
     'http://api.willywairagu.com',
     'https://api.willywairagu.com',
 ]
+
+# Add CORS_ALLOW_ALL_ORIGINS for testing (remove in production)
+CORS_ALLOW_ALL_ORIGINS = True  # Temporary for debugging
 
 FILE_UPLOAD_PERMISSIONS=0o640
