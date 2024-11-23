@@ -166,14 +166,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# SSL/HTTPS Settings
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# Disable SSL/HTTPS settings
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 
-# CORS Settings
-CORS_ALLOW_CREDENTIALS = True
+# Update CORS settings
+CORS_ALLOW_ALL_ORIGINS = True  # Temporarily allow all origins for testing
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://willywairagu.com',
