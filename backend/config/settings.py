@@ -169,7 +169,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Disable SSL/HTTPS settings
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 
 # Update CORS settings
 CORS_ALLOW_ALL_ORIGINS = True  # Temporarily allow all origins for testing
