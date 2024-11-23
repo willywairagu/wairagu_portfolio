@@ -37,11 +37,6 @@ LOGGING = {
     },
 }
 
-# Security settings
-# SECURE_SSL_REDIRECT = True
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
 
 
 # Application definition
@@ -170,12 +165,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Update CORS settings
+
+# SSL/HTTPS Settings
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# CORS Settings
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://willywairagu.com',
-    'https://willywairagu.com', 
+    'https://willywairagu.com',
     'http://www.willywairagu.com',
     'https://www.willywairagu.com',
     'http://api.willywairagu.com',
