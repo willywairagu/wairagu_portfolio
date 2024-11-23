@@ -8,6 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Carousel from 'react-material-ui-carousel';
 
 const Experience = () => {
+  const theme = useTheme();
   const [experience, setExperience] = useState([]);
   
   const fetchExperience = () => {
@@ -17,8 +18,7 @@ const Experience = () => {
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-      },
-      withCredentials: true
+      }
     })
     .then(response => {
       console.log('Experience API response:', response.data);
@@ -34,7 +34,7 @@ const Experience = () => {
     fetchExperience();
   }, []);
 
-  // Add debug render
+  // Debug render
   console.log('Current experience state:', experience);
 
   return (
@@ -61,7 +61,7 @@ const Experience = () => {
               <Grid item xs={12}>
                 <Box display="flex" flexDirection={{ xs: "column", md: "row" }}>
                   <Box flex={1} marginRight={{ md: 4 }}>
-                    {item.images.length > 0 && (
+                    {item.images && item.images.length > 0 && (
                       <Carousel interval={5000}>
                         {item.images.map((img, index) => (
                           <Box
@@ -71,8 +71,8 @@ const Experience = () => {
                             alt={`${item.role} at ${item.company}`}
                             effect="blur"
                             width={1}
-                            height={750} // Set a fixed height for the images
-                            style={{ objectFit: 'cover' }} // Ensure the image covers the box
+                            height={750}
+                            style={{ objectFit: 'cover' }}
                             borderRadius={2}
                           />
                         ))}
@@ -113,7 +113,6 @@ const Experience = () => {
       </Carousel>
     </Box>
   );
-  
 };
 
 export default Experience;

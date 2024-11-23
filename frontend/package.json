@@ -1,7 +1,8 @@
 {
-  "name": "freelance-developer-website",
+  "name": "wairagu-portfolio",
   "version": "1.0.0",
-  "description": "Freelance Developer Website",
+  "description": "Personal Portfolio Website",
+  "homepage": "https://willywairagu.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",

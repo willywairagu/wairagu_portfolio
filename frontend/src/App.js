@@ -20,7 +20,7 @@ const App = () => {
       />
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <Layout>
             <Routes>
               <Route exact path='/' element={<Home />} />
